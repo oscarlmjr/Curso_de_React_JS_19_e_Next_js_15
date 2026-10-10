@@ -1,0 +1,85 @@
+
+Get-ExecutionPolicy
+Set-ExecutionPolicy AllSigned -Force
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+
+ssh-keygen
+/c/Users/oscar/.ssh/oscarlmjr_note
+ssh-keygen -R 34.55.42.224 
+34.41.57.203
+git init
+git config --global user.name "oscarlmjr"
+git config --global user.email "oscarlmjr@gmailcom"
+* git config --global init.defaultBranch main *
+
+git remote add origin git@github.com:oscarlmjr/Section_11__.git
+git remote set-url origin git@github.com:oscarlmjr/Section_11__.git
+git remote -v
+eval $(ssh-agent)
+ssh-add ~/.ssh/oscarlmjr_note
+
+git pull origin main
+
+git status > git add .> git  commit -m 'Initial commit'
+git push --set-upstream origin main
+git push --set-upstream --force origin develop
+
+git clone git@github.com:oscarlmjr/Section_11__.git
+
+git push --set-upstream --force origin main == git push -u origin main
+
+python -m venv .venv
+.venv/Scripts/activate
+
+##########################################
+
+ git update-ref -d HEAD
+
+git fetch
+git reset --hard origin/main
+
+git ls-files
+git status --ignored
+git ls-files | xargs -n 1 dirname | sort -u
+
+##########################################
+
+git rebase -i HEAD~2
+>> i (para editar)
+>> (apagar pick e digitar drop no commit que será deletado)
+>> Esc + :
+>> wq
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!git rebase --abort!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+####git rebase --skip (?)
+git rebase --continue (avança em um processo de reorganização de vários commits após você resolver um problema)
+git push --force origin main
+####git push origin main --force-with-lease (não altera o repositório remoto)
+
+####git commit --amend (antes do git rebase --continue (?), altera e substitui o seu último commit)
+>> "Atualiza commit"
+>> Esc + :
+>> wq
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+git rebase -i HEAD~2
+>> i (para editar)
+>> (apagar pick e digitar drop no commit que será deletado)
+>> Esc + :
+>> wq
+!!!!!git rebase --abort!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+####git rebase --skip (?)
+git rebase --continue (avança em um processo de reorganização de vários commits após você resolver um problema)
+git push --force origin main
+####git push origin main --force-with-lease (não altera o repositório remoto)
+
+####git commit --amend (antes do git rebase --continue (?), altera e substitui o seu último commit)
+>> "Atualiza commit"
+>> Esc + :
+>> wq
+
+

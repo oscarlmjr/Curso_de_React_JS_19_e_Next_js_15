@@ -1,0 +1,60 @@
+**************criar submodule local
+cd ./projeto1
+git init
+cd ..
+git submodule add ./angular-for-beginners-signals-course
+git submodule status
+git submodule set-url angular-for-beginners-signals-course git@github.com:oscarlmjr/angular-for-beginners-signals-course.git
+git submodule sync --recursive
+*****se necessário >> cd ./projeto1
+git remote add origin git@github.com:oscarlmjr/angular-for-beginners-signals-course.git
+git remote set-url origin git@github.com:oscarlmjr/angular-for-beginners-signals-course.git
+git add .gitmodules
+git commit -m "Atualiza URL do submódulo"
+
+
+**************alterar endereço remoto
+git config -f .gitmodules submodule.angular-for-beginners-signals-course.url git@github.com:oscarlmjr/angular-for-beginners-signals-course.git
+git  submodule sync
+git submodule update --init --recursive
+
+
+**************renomear
+git mv caminho/para/nome-antigo caminho/para/nome-novo
+**************atualizar configurações internas do git
+git config -f .gitmodules submodule.nome-antigo.path caminho/para/nome-novo
+git submodule status
+git config -f .gitmodules --rename-section submodule.nome-antigo submodule.nome-novo
+git config --rename-section submodule.nome-antigo submodule.nome-novo
+git  submodule sync
+git config --file=.gitmodules submodule.<caminho-do-submodulo>.url <nova-url-remota>
+git submodule sync
+git submodule update --init --recursive --remote
+git add .gitmodules
+git commit -m "Renomeia o submódulo de nome-antigo para nome-novo"
+
+
+**************paths
+git submodule foreach -q git config remote.origin.url
+git config --file .gitmodules --get submodule.Section_8_aula403.url
+git submodule
+cat .gitmodules
+git config --file .gitmodules --list
+git config --get-regexp submodule\..*\.url
+git config --file .gitmodules --get-regexp path
+git config --file .gitmodules --get-regexp '\.url$'
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+git submodule deinit -f ./angular-for-beginners-signals-course
+git config -f .gitmodules --remove-section submodule./angular-for-beginners-signals-course
+git rm --cached ./angular-for-beginners-signals-course
+rm -rf .git/modules/angular-for-beginners-signals-course
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!git rm .gitmodules!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+git add .gitmodules
+git commit -m "Removendo submódulo e sua URL"
+git push origin main
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
