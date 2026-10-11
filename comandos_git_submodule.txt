@@ -1,17 +1,15 @@
 **************criar submodule local
 cd ./projeto1
 git init
-cd ..
-git submodule add ./chronos-pomodoro
-git submodule status
-git submodule set-url chronos-pomodoro git@github.com:oscarlmjr/chronos-pomodoro.git
-git submodule sync --recursive
-*****se necessário >> cd ./projeto1
 git remote add origin git@github.com:oscarlmjr/chronos-pomodoro.git
 git remote set-url origin git@github.com:oscarlmjr/chronos-pomodoro.git
 git status > git add . > git commit -m 'Adicionando arquivos e submodule'
 git pull origin main >> --allow-unrelated-histories
 cd ..
+git submodule add ./chronos-pomodoro
+git submodule status
+git submodule set-url chronos-pomodoro git@github.com:oscarlmjr/chronos-pomodoro.git
+git submodule sync --recursive
 git status > git add .gitmodules > git commit -m 'Adicionando arquivos e submodule'
 git push --set-upstream origin main
 
