@@ -1,0 +1,5 @@
+chronos-pomodoro
+https://github.com/luizomf/chronos-pomodoro
+
+Git + Github + SSH (Básico)
+https://www.youtube.com/watch?v=SnTBOhYFr28

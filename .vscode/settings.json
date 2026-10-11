@@ -7,6 +7,7 @@
     "editor.insertSpaces": true,
     "breadcrumbs.enabled": false,
     "editor.stickyScroll.enabled": false,
+    "editor.lineNumbers": "on",
     "[html]": {
         "editor.tabSize": 2,
         "editor.insertSpaces": true,

@@ -1,0 +1,3 @@
+[submodule "chronos-pomodoro"]
+	path = chronos-pomodoro
+	url = git@github.com:oscarlmjr/chronos-pomodoro.git

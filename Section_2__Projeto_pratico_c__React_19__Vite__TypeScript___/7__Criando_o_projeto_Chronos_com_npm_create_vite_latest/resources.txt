@@ -1,0 +1,8 @@
+settings.json
+https://github.com/luizomf/chronos-pomodoro/blob/ebd471c37c06895e41a77785949734659f3e5638/.vscode/settings.json
+
+.prettierrc.json
+https://github.com/luizomf/chronos-pomodoro/blob/ebd471c37c06895e41a77785949734659f3e5638/.prettierrc.json
+
+chronos-pomodoro
+https://github.com/luizomf/chronos-pomodoro

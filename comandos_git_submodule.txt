@@ -2,19 +2,22 @@
 cd ./projeto1
 git init
 cd ..
-git submodule add ./angular-for-beginners-signals-course
+git submodule add ./chronos-pomodoro
 git submodule status
-git submodule set-url angular-for-beginners-signals-course git@github.com:oscarlmjr/angular-for-beginners-signals-course.git
+git submodule set-url chronos-pomodoro git@github.com:oscarlmjr/chronos-pomodoro.git
 git submodule sync --recursive
 *****se necessário >> cd ./projeto1
-git remote add origin git@github.com:oscarlmjr/angular-for-beginners-signals-course.git
-git remote set-url origin git@github.com:oscarlmjr/angular-for-beginners-signals-course.git
-git add .gitmodules
-git commit -m "Atualiza URL do submódulo"
+git remote add origin git@github.com:oscarlmjr/chronos-pomodoro.git
+git remote set-url origin git@github.com:oscarlmjr/chronos-pomodoro.git
+git status > git add . > git commit -m 'Adicionando arquivos e submodule'
+git pull origin main >> --allow-unrelated-histories
+cd ..
+git status > git add .gitmodules > git commit -m 'Adicionando arquivos e submodule'
+git push --set-upstream origin main
 
 
 **************alterar endereço remoto
-git config -f .gitmodules submodule.angular-for-beginners-signals-course.url git@github.com:oscarlmjr/angular-for-beginners-signals-course.git
+git config -f .gitmodules submodule.chronos-pomodoro.url git@github.com:oscarlmjr/chronos-pomodoro.git
 git  submodule sync
 git submodule update --init --recursive
 
@@ -46,10 +49,10 @@ git config --file .gitmodules --get-regexp '\.url$'
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-git submodule deinit -f ./angular-for-beginners-signals-course
-git config -f .gitmodules --remove-section submodule./angular-for-beginners-signals-course
-git rm --cached ./angular-for-beginners-signals-course
-rm -rf .git/modules/angular-for-beginners-signals-course
+git submodule deinit -f ./chronos-pomodoro
+git config -f .gitmodules --remove-section submodule./chronos-pomodoro
+git rm --cached ./chronos-pomodoro
+rm -rf .git/modules/chronos-pomodoro
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!git rm .gitmodules!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
